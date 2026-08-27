@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>News Classification</title>
+
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="brand">
+          <div class="brand-icon">N</div>
+
+          <div>
+            <h1>NewsClassify</h1>
+            <span>Machine Learning News Classification</span>
+          </div>
+        </div>
+
+        <div class="status">
+          <span class="status-dot"></span>
+          Model Online
+        </div>
+      </header>
+
+      <main class="main">
+        <section class="hero">
+          <div class="badge">● NLP & Machine Learning</div>
+
+          <h2>
+            Automatically classify<br />
+            <span>news articles by topic.</span>
+          </h2>
+
+          <p>
+            Enter a news article below and let the machine-learning model
+            identify its most likely category.
+          </p>
+        </section>
+
+        <section class="classifier-card">
+          <div class="card-header">
+            <div>
+              <h3>Article Classification</h3>
+
+              <p>Paste the headline or article content you want to classify.</p>
+            </div>
+
+            <div class="news-icon">📰</div>
+          </div>
+
+          <label for="articleText"> NEWS ARTICLE </label>
+
+          <textarea
+            id="articleText"
+            placeholder="Paste a news article here...
+
+Example:
+The government announced a major technology investment today..."
+          ></textarea>
+
+          <div class="action-row">
+            <span class="hint"> Text is processed using NLP and TF-IDF. </span>
+
+            <button id="classifyButton">
+              Classify Article
+              <span>→</span>
+            </button>
+          </div>
+
+          <div id="result" class="result hidden">
+            <div class="result-icon">✓</div>
+
+            <div class="result-content">
+              <span class="result-label"> MODEL PREDICTION </span>
+
+              <h3 id="category"></h3>
+
+              <p>The article has been classified into this category.</p>
+            </div>
+          </div>
+        </section>
+
+        <section class="info-grid">
+          <div class="info-card">
+            <div class="info-number">01</div>
+
+            <h4>Text Preprocessing</h4>
+
+            <p>
+              Cleans and normalises the article before it is passed to the
+              classification pipeline.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-number">02</div>
+
+            <h4>TF-IDF Features</h4>
+
+            <p>
+              Converts the article into numerical features that capture the
+              importance of words within the text.
+            </p>
+          </div>
+
+          <div class="info-card">
+            <div class="info-number">03</div>
+
+            <h4>Classification</h4>
+
+            <p>
+              The trained machine-learning model predicts the most likely news
+              category.
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer>
+        <span>NewsClassify</span>
+
+        <span> FastAPI · NLP · TF-IDF · Machine Learning </span>
+      </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+  </body>
+</html>
